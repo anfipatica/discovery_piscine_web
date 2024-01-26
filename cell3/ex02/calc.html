@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+				justify-content: center;
+				align-items: center;
+				
+			}
+			.calculator {
+				display: flex;
+				flex-direction: column;
+				justify-content:space-evenly;
+				align-items: center;
+				background-color: rgb(204, 209, 205);
+				height: 40%;
+				width: 30%;
+				border-radius: 5px;
+				padding: 5px;
+				box-shadow: 0px 0px 5px 1px rgba(69, 68, 71, 0.652);
+			}
+
+			.upper, .lower {
+				height: 50%;
+				width: 100%;
+				display: flex;
+				justify-content:center;
+				gap:10px;
+				align-items: center;
+
+			}
+
+			.upper input {
+				width:25%;
+				height: 40%;
+				font-size: 30px;
+				text-align: center;
+				border: none;
+			}
+			.upper select {
+				width: 20%;
+				height: 40%;
+				font-size: 30px;
+				text-align: center;
+				border: none;
+			}
+
+			.lower input {
+				width: 60%;
+				height: 50%;
+				border-radius: 5px;
+				font-size: 30px;
+				font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				border: 2px solid rgb(249, 249, 249);
+				background-color: rgb(146, 182, 144);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="calculator">
+			<div class="upper">
+				<input type="text" maxlength="5">
+				<select name="operator" id="operators">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</select>
+				<input type="text" maxlength="5">
+			</div>
+			<div class="lower">
+				<input type="submit" value="Try me!">
+			</div>
+		</div>
+	</body>
+</html>
