@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				display: flex;
+				height: 100vh;
+				justify-content: center;
+				align-items: center;
+			}
+			#balloon {
+				width: 200px;
+				height: 200px;
+				background-color:rgb(189,71,71);
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="balloon"></div>
+
+		<script type="text/javascript">
+			const balloon = document.getElementById("balloon");
+			const style = window.getComputedStyle(balloon, null);
+			let width = style.getPropertyValue("width").replace("px",'');
+			width = parseInt(width);
+			let height = style.getPropertyValue("height").replace("px",'');
+			height = parseInt(height);
+			let color = style.getPropertyValue("background-color");
+			let new_color = ["#BD4747", "#63C061", "#66B6D2"];
+			let n = 0;
+			console.log(color);
+
+			function balloon_clicked() {
+				console.log(n);
+				if (n >= 2 || n < 0)
+					n = 0;
+				else
+					n++;
+				balloon.style.backgroundColor = new_color[n];
+
+				if (width < 420) {
+					balloon.style.width = String(width += 10)+"px";
+					balloon.style.height = String(height += 10)+"px";
+				} else {
+					balloon.style.width = "200px";
+					balloon.style.height = "200px";
+					width = 200;
+					height = 200;
+				}
+			}
+			function lost_focus()  {
+				console.log(n);
+				if (n > 2 || n <= 0)
+					n = 2;
+				else
+					n--;
+				balloon.style.backgroundColor = new_color[n];
+
+				if (width > 200) {
+					balloon.style.width = String(width -= 5)+"px";
+					balloon.style.height = String(height -= 5)+"px";
+				}
+
+			}
+
+			balloon.addEventListener("click", balloon_clicked);
+			balloon.addEventListener("mouseleave", lost_focus);
+		</script>
+	</body>
+</html>
