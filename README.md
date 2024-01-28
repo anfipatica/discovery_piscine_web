@@ -37,5 +37,22 @@ Volvemos a partir del ejercicio anterior, en este caso una de las imágenes actu
 Empezamos a tocar CSS a un nivel más extenso. Creamos una web que contenga un título en blanco con algún caracter especial. Fondo rosa, dos imágenes una al lado de la otra con un link debajo. Una división de la web y un texto con nuestro nombre de usuario.
 Para este ejercicio recomiendo encarecidamente buscar información sobre **display: flex;**, un display para la colocación de los elementos en la página que aunque algo complejo de entender, es muy sencillo de manejar y ofrece muy buenos resultados.
 
-<img width="836" alt="basics.html screenshot" src="https://github.com/anfipatica/discovery_piscine_web/assets/140256308/e9409efe-dc45-4e8a-8990-ba7e6882b27c">
+<img width="600" alt="basics.html screenshot" src="https://github.com/anfipatica/images/assets/140256308/d934ee5d-f35d-4f62-bddf-8b7bc447994e">
 
+### ex05: tab.html
+Consiste en la creación de una web que contiene una tabla centrada con dos columnas y una única línea, es decir, dos celdas.
+
+### ex06: responsibe.html
+Partimos del código anterior pero en este caso las dos celdas deben ocupar el 100% de la pantalla, es decir, tenemos que jugar a dar el tamaño de los elementos en %.
+
+## cellule2
+### ex00: responsive.html responsive.css
+Cogemos el código del último ejercicio y en vez de introducir todo el código en un único archivo html gracias a las etiquetas **<style> </style>** de head, introducimos el código css en un archivo propio y referenciaremos este en el html con **<link>**
+
+### ex01: menu.html menu.css
+Debemos realizar un pequeño menú desplegable empleando la etiqueta **<select> </select>**.
+
+<img width="500" alt="select menu screenshot" src="https://github.com/anfipatica/images/assets/140256308/91701c52-b68a-49a2-a437-22322e4e956a">
+
+### ex02: parallax.html parallax.css
+Realizaremos una web que aplique el efecto parallax o de paralaje. Cuanto más cercano se encuentra un objeto a nosotros, más movimiento detectamos, y cuanto más lejos, menos. La idea de este proyecto es crear esta sensación de profundidad espacial en un espacio bisimensiona, con la intención de mejorar la experiencia de usuario.
