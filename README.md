@@ -37,6 +37,5 @@ Volvemos a partir del ejercicio anterior, en este caso una de las imágenes actu
 Empezamos a tocar CSS a un nivel más extenso. Creamos una web que contenga un título en blanco con algún caracter especial. Fondo rosa, dos imágenes una al lado de la otra con un link debajo. Una división de la web y un texto con nuestro nombre de usuario.
 Para este ejercicio recomiendo encarecidamente buscar información sobre **display: flex;**, un display para la colocación de los elementos en la página que aunque algo complejo de entender, es muy sencillo de manejar y ofrece muy buenos resultados.
 
-![HOLAAAA](https://drive.google.com/file/d/1OPgWNuSjn6sqtQszX4hLGb7sOH4e1az6/view?usp=sharing)
-
+<img width="836" alt="basics.html screenshot" src="https://github.com/anfipatica/discovery_piscine_web/assets/140256308/e9409efe-dc45-4e8a-8990-ba7e6882b27c">
 
