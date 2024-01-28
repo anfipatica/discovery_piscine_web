@@ -4,11 +4,11 @@ La piscina discovery web se trata de una semana de inmersión en el mundo de la 
 
 Se estructura en 5 unidades principales (cellules):
 
-- [Cellule0](##cellule0): Iniciación a shell y bash.
-- [Cellule1](##cellule1): Iniciación a HTML.
-- [Cellule2](##cellule2): Iniciación a CSS.
-- [Cellule3](##cellule3): Iniciación a JavaScript.
-- [Cellule4](##cellule4): RUSH.
+- [Cellule0](#cellule0): Iniciación a shell y bash.
+- [Cellule1](#cellule1): Iniciación a HTML.
+- [Cellule2](#cellule2): Iniciación a CSS.
+- [Cellule3](#cellule3): Iniciación a JavaScript.
+- [Cellule4](#cellule4): RUSH.
 
 ## Cellule0:
 ### ex00:
