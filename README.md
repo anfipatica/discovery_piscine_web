@@ -55,4 +55,17 @@ Debemos realizar un pequeño menú desplegable empleando la etiqueta **<select> 
 <img width="500" alt="select menu screenshot" src="https://github.com/anfipatica/images/assets/140256308/91701c52-b68a-49a2-a437-22322e4e956a">
 
 ### ex02: parallax.html parallax.css
-Realizaremos una web que aplique el efecto parallax o de paralaje. Cuanto más cercano se encuentra un objeto a nosotros, más movimiento detectamos, y cuanto más lejos, menos. La idea de este proyecto es crear esta sensación de profundidad espacial en un espacio bisimensiona, con la intención de mejorar la experiencia de usuario.
+Realizaremos una web que aplique el efecto parallax o de paralaje. Cuanto más cercano se encuentra un objeto a nosotros, más movimiento detectamos, y cuanto más lejos, menos. La idea de este proyecto es crear esta sensación de profundidad espacial en un espacio bisimensional, con la intención de mejorar la experiencia de usuario.
+Este ejercicio es más complicado de lo que parece a simple vista si se quiere realizar correctamente. La primera vez que lo realicé no investigué adecuadamente sobre el efecto parallax. La segunda vez, vi [este video](https://www.youtube.com/watch?v=rLrLJQBG_qo&ab_channel=DeveloperFilip) que me ayudó bastante a entender la base de cómo realizar el código y luego adaptarlo a mis necesidades.
+
+### ex03: card.css card-html
+El último ejercicio de esta unidad consiste en realizar una tarjeta de estudiante a partir de las estructuras de las tablas. Vemos cómo css cambia totalmente el aspecto de una página.
+<img width="600" alt="14a40c880a7c61312be3afb59d29d153" src="https://github.com/anfipatica/discovery_piscine_web/assets/140256308/9f3351ca-2db1-4ef2-b955-9e799f2f169e">
+
+## Cellule3
+## ex00: backgroound.html background.css background.js
+Finalmente empezamos con JavaScript. En este primer ejercicio debemos crear un código donde al presionar un botón se cambie el color de fondo, por lo que tendremos que trabajar con manejadores de eventos, crear nuestro generador de números pseudorandomizados... Considero que es un salto de nivel grande para empezar con js.
+
+## ex01: ballon.html
+Crearemos un globo de 200px mínimo y 420px de máximo que se hinchará (y modificará su color) cuando presionemos sobre él, y se desinflará al alejar el ratón de él.
+[gif globo](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHUxbWFlYjFlYXB2M2Rwbzhhc2NiOTRnM3g1YzRyZjh0dm02cW40ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gEIkszRdJel7FKP2rQ/giphy.gif)
