@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To-do list</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 100vh;
+		}
+
+		#ft_list {
+			background-color: aquamarine;
+			width: fit-content;
+			min-height: 60%;
+			margin-bottom: 30px;
+		}
+		ul {
+			border: 1px solid gray;
+			border-radius: 3px;
+			width: 200px;
+			height: 95%;
+			background-color: beige;
+		}
+		button {
+			background-color: rgb(20, 20, 20);
+			color: aliceblue;
+			width: 80px;
+			height: 40px;
+		}
+		div div {
+			width: 90%;
+			height: 30px;
+			background-color: black;
+			color: rgb(125, 138, 150);
+			margin: 10px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>TO DO LIST</h1>
+	<div id="ft_list">
+		<ul type="square" id="list">
+		</ul>
+	</div>
+	<button id="button">New...</button>
+
+	<script type="text/javascript">
+		const button = document.getElementById("button");
+		let list = document.getElementById("list");
+
+		function add_div() {
+			let new_entry = document.createElement("li");
+			let div = document.createElement("div");
+			new_entry.appendChild(document.createTextNode(prompt("Enter your new TO DO: ")));
+			div.prepend(new_entry);
+			list.prepend(div);
+
+			div.addEventListener("click", function() {
+				if (window.confirm("Are you sure you want to delete the task ") == true)
+					div.remove();
+			});
+		}
+
+		button.addEventListener("click", add_div);
+
+	</script>
+</body>
+</html>

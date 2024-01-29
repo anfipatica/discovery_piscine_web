@@ -68,7 +68,7 @@
 	<body>
 		<div class="calculator">
 			<div class="upper">
-				<input type="text" maxlength="5" id="n1">
+				<input type="number" placeholder="0" id="n1">
 				<select name="operator" id="operator">
 					<option value="+">+</option>
 					<option value="-">-</option>
@@ -76,7 +76,7 @@
 					<option value="/">/</option>
 					<option value="%">%</option>
 				</select>
-				<input type="number" maxlength="5" id="n2">
+				<input type="number" placeholder="0" id="n2">
 			</div>
 			<div class="lower">
 				<input type="submit" value="Try me!" id="button">
@@ -91,18 +91,30 @@
 
 			button.addEventListener("click", function() {
 				let result;
-				if (operator.value == '+')
-					result = parseInt(n1.value) + parseInt(n2.value);
+				let nn1 = parseInt(n1.value);
+				let nn2 = parseInt(n2.value);
+
+				if (nn1 % 1 != 0 || nn2 % 1 != 0 || nn1 < 0 || nn2 < 0)
+					result = "Error :(";
+				else if (operator.value == '+')
+					result = nn1 + nn2;
 				else if (operator.value == '-')
-					result = parseInt(n1.value) - parseInt(n2.value);
+					result = nn1 - nn2;
 				else if (operator.value == '*')
-					result = parseInt(n1.value) * parseInt(n2.value);
+					result = nn1 * nn2;
+				else if ((operator.value == '/' || operator.value == '%') && nn2 == 0)
+					result = "It's over 9000!";
 				else if (operator.value == '/')
-					result = parseInt(n1.value) / parseInt(n2.value);
+					result = nn1 / nn2;
 				else
-					result = parseInt(n1.value) % parseInt(n2.value);
+					result = nn1 % nn2;
 				window.alert(result);
-			})
+				console.log(result);
+				}
+			)
+			window.setInterval( function() {
+				window.alert("Please, use me...")
+			}, 30000);
 		</script>
 	</body>
 </html>
