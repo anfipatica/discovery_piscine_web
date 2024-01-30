@@ -10,6 +10,10 @@ Se estructura en 5 unidades principales (cellules):
 - [Cellule3](#cellule3): Iniciación a JavaScript.
 - [Cellule4](#cellule4): RUSH.
 
+Además, he incluído al final unas capturas con unos apuntes que tomé para entender mejor el funcionamiento de justify-content y align-items con display-flex, donde incluí algunos dibujos realizados en excalidraw que quizás te puedan ayudar si también tienes problemas para entender esto.
+
+- [Apuntes sobre display=flex;](#apuntes-sobre-displayflex)
+
 ## Cellule0:
 ### ex00:
 Creación de una carpeta mediante comando en shell
@@ -38,6 +42,8 @@ Empezamos a tocar CSS a un nivel más extenso. Creamos una web que contenga un t
 
 > [!TIP]
 > Para este ejercicio (y los siguientes) recomiendo encarecidamente buscar información sobre **display: flex;**, un display para la colocación de los elementos en la página que aunque algo complejo de entender, es muy sencillo de manejar y ofrece muy buenos resultados.
+>
+> Dejo un link para ver las capturas que he adjuntado al final explicando dos conceptos básicos de este display (justify-content y align-items) de los que hice algunos dibujos en excalidraw para comprenderlos mejor: - [Apuntes sobre display=flex;](#apuntes-sobre-displayflex)
 
 <img width="600" alt="basics.html screenshot" src="https://github.com/anfipatica/images/assets/140256308/d934ee5d-f35d-4f62-bddf-8b7bc447994e">
 
@@ -66,25 +72,25 @@ El último ejercicio de esta unidad consiste en realizar una tarjeta de estudian
 <img width="600" alt="14a40c880a7c61312be3afb59d29d153" src="https://github.com/anfipatica/discovery_piscine_web/assets/140256308/9f3351ca-2db1-4ef2-b955-9e799f2f169e">
 
 ## Cellule3
-## ex00: backgroound.html background.css background.js
+### ex00: backgroound.html background.css background.js
 Finalmente empezamos con JavaScript. En este primer ejercicio debemos crear un código donde al presionar un botón se cambie el color de fondo, por lo que tendremos que trabajar con manejadores de eventos, manipular el DOM, crear nuestro generador de números pseudorandomizados...
 
 <img width="600" alt="background changing gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExam5wZXNubnE0Z2t3ZjNqZGNvdnJyOWpuN2Y5MWUzY2M3ZDNzcnZpeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RjmLePRmRZVztG07gY/giphy.gif">
 
 
-## ex01: ballon.html
+### ex01: ballon.html
 Crearemos un globo de 200px mínimo y 420px de máximo que se hinchará (y modificará su color) cuando presionemos sobre él, y se desinflará al alejar el ratón de él.
 
 <img width="600" alt="balloon gif" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHUxbWFlYjFlYXB2M2Rwbzhhc2NiOTRnM3g1YzRyZjh0dm02cW40ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gEIkszRdJel7FKP2rQ/giphy.gif">
 
-## ex02: calc.html
+### ex02: calc.html
 Este ejercicio consiste en hacer una pequeña calculadora sencilla. Aunque no hay requerimientos en cuanto a la parte estética, sí se establece en el subject qué elementos deben componerla por lo que el resultado final debería seguir una estructura algo similar a esta:
 
 <img width="600" alt="calculator gif" src="https://media.giphy.com/media/GFNsDSYqZDME0FIk0H/giphy.gif">
 
 Además incluye eventos de tiempo ya que cada 30 segundos debe aparecer una alerta.
 
-## ex03: index.html todo.js
+### ex03: index.html todo.js
 Deberemos crear una lista de tareas en un elemento de tipo lista que reciba input del usuario a través de un prompt, y que pueda eliminar las tareas haciendo click sobre ellas. Manejo del DOM y eventos a tope.
 
 Lo realmente novedoso e interesante de este proyecto se encuentra en una tarea adicional del subject, la cual pide que los elementos dentro de la lista se mantenga al recargar la página o al salir de esta. Piden emplear cookies pero finalmente opté por usar localStorage ya que en general es recomendable usarlo frente a las cookies salvo que se necesite enviar algo a un servidor, además de proporcionar una manipulación más cómoda y evitar problemas con los navegadores.
@@ -100,3 +106,19 @@ El resultado es el siguiente:
 
 
 <img width="600" alt="calculator gif" src="https://github.com/anfipatica/discovery_piscine_web/assets/140256308/f7b31c6e-928d-4cdb-8bd8-9958a58c1022">
+
+
+
+
+
+
+## Apuntes sobre display=flex;
+
+<img alt="display=flex notes 1" src="https://i.imgur.com/9YLDuqf.png2">
+
+<img alt="display=flex notes 1" src="https://i.imgur.com/redgH3U.png">
+
+<img alt="display=flex notes 1" src="https://i.imgur.com/9YLDuqf.png">
+
+
+
