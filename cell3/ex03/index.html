@@ -5,46 +5,62 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>To-do list</title>
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 		body {
+			background-color: #f7f4f4;
 			margin: 0;
 			padding: 0;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			height: 100vh;
+			font-family: 'Poppins', sans-serif;
 		}
 
 		#ft_list {
-			background-color: aquamarine;
 			width: fit-content;
-			min-height: 60%;
+			height: 62%;
 			margin-bottom: 30px;
+			display: flex;
+			align-items: center;
 		}
 		ul {
-			border: 1px solid gray;
-			border-radius: 3px;
-			width: 200px;
+			overflow-y: scroll;
+			padding: 12px 10px 12px 30px;
+			border-radius: 1px;
+			width: 350px;
 			height: 95%;
-			background-color: beige;
+			background-color: #84a59d;
+			font-weight: lighter;
+			box-shadow: 0 0 2px 1px #56706a;
 		}
 		button {
 			background-color: rgb(20, 20, 20);
 			color: aliceblue;
-			width: 80px;
-			height: 40px;
+			width: 110px;
+			height: 50px;
+			border-radius: 4px;
+			font-size: 25px;
+		}
+		button:hover {
+			color: #f6bd60;
+			
 		}
 		div div {
 			width: 90%;
-			height: 30px;
-			background-color: black;
-			color: rgb(125, 138, 150);
+			height: fit-content;
+			color: rgb(235, 235, 235);
 			margin: 10px;
 			font-size: 20px;
+		}
+		div div:hover {
+			background-color: #f6bd60;
+			color: rgb(17, 16, 16);
 		}
 	</style>
 </head>
 <body>
-	<h1>TO DO LIST</h1>
+	<h1> <u>TO DO LIST</u></h1>
 	<div id="ft_list">
 		<ul type="square" id="list">
 		</ul>
@@ -54,22 +70,55 @@
 	<script type="text/javascript">
 		const button = document.getElementById("button");
 		let list = document.getElementById("list");
+		let n = 0;
+
+
+		function remove_div(div,index) {
+			if (window.confirm("Are you sure you want to delete the task ") == true) {
+				div.remove();
+				localStorage.removeItem(index);
+				console.log(index +" - "+div.textContent);
+			}
+		}
+
+		function enclose_remove_div(div, index) {
+			return function() {
+				remove_div(div, index);
+			}
+		}
 
 		function add_div() {
 			let new_entry = document.createElement("li");
 			let div = document.createElement("div");
-			new_entry.appendChild(document.createTextNode(prompt("Enter your new TO DO: ")));
+			let task = document.createTextNode(prompt("Enter your new TO DO: "));
+			if (!task.textContent || task.textContent == "null")
+				return (null);
+			new_entry.appendChild(task);
 			div.prepend(new_entry);
 			list.prepend(div);
-
-			div.addEventListener("click", function() {
-				if (window.confirm("Are you sure you want to delete the task ") == true)
-					div.remove();
-			});
+			localStorage.setItem(n, new_entry.textContent);
+			div.addEventListener("click", enclose_remove_div(div,n));
+			localStorage.setItem(0, n++);
 		}
 
-		button.addEventListener("click", add_div);
+		function add_div_on_load() {
+			if (localStorage.length == 0)
+				localStorage.setItem(0, 0);
+			while (++n <= localStorage.getItem(0)) {
+				if (localStorage.getItem(n) != null)
+				{
+					let new_entry = document.createElement("li");
+					let div = document.createElement("div");
+					new_entry.appendChild(document.createTextNode(localStorage.getItem(n)));
+					div.prepend(new_entry);
+					list.prepend(div);
+					div.addEventListener("click", enclose_remove_div(div, n));
+				}
+			}
+		}
 
+		window.addEventListener("load", add_div_on_load);
+		button.addEventListener("click", add_div);
 	</script>
 </body>
 </html>
