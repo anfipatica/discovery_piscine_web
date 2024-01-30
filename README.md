@@ -35,7 +35,9 @@ Sobre el ejercicio anterior añadir dos imágenes una al lado de la otra y centr
 Volvemos a partir del ejercicio anterior, en este caso una de las imágenes actuará como un link.
 ### ex04: basics.html
 Empezamos a tocar CSS a un nivel más extenso. Creamos una web que contenga un título en blanco con algún caracter especial. Fondo rosa, dos imágenes una al lado de la otra con un link debajo. Una división de la web y un texto con nuestro nombre de usuario.
-Para este ejercicio recomiendo encarecidamente buscar información sobre **display: flex;**, un display para la colocación de los elementos en la página que aunque algo complejo de entender, es muy sencillo de manejar y ofrece muy buenos resultados.
+
+> [!TIP]
+> Para este ejercicio (y los siguientes) recomiendo encarecidamente buscar información sobre **display: flex;**, un display para la colocación de los elementos en la página que aunque algo complejo de entender, es muy sencillo de manejar y ofrece muy buenos resultados.
 
 <img width="600" alt="basics.html screenshot" src="https://github.com/anfipatica/images/assets/140256308/d934ee5d-f35d-4f62-bddf-8b7bc447994e">
 
@@ -89,7 +91,11 @@ El resultado es el siguiente:
 
 <img width="600" alt="calculator gif" src="https://media.giphy.com/media/RGqP7bnQpScfRst1Ix/giphy.gif">
 
--> El local storage se compone, al igual que las cookies, de una "clave" y de su contenido. Gracias a la clave podemos acceder al contenido que hemos almacenado. En este caso para poder acceder facilmente a los elementos, he trabajado como si de un array se tratara: las claves serán números consecutivos empezando por el 1 como si de posiciones se tratara (la posición 0 está ocupada almacenando "n", una información vital para el correcto funcionamiento de este planteamiento).
-Cuando se recarga la página se activa un evento que va recorriendo de 1 a "n" el posible contenido de localStorage, y si no es nulo, lo coloca en la lista tal como hizo el usuario. "n" es el número correspondiente a la clave del último elemento almacenado, y lo almacenamos en la *posición* 0 de localStorage, es decir, la clave "0". Según se van borrando elementos, las claves dejan de ser números consetivos, pero lo importante es conocer cual es el último de estos números para asegurarnos que no se sobreescriba ningún elemento. Si se detecta que ya no quedan elementos en la lista, *n* se resetea a 0.
+> El local storage se compone, al igual que las cookies, de una "clave" y de su contenido. Gracias a la clave podemos acceder al contenido que hemos almacenado. En este caso para poder acceder facilmente a los elementos, he trabajado como si de un array se tratara: las claves serán números consecutivos empezando por el 1 como si de posiciones se tratara (la posición 0 está ocupada almacenando "n", una información vital para el correcto funcionamiento de este planteamiento).
+> 
+> Cuando se recarga la página se activa un evento que va recorriendo de 1 a "n" el posible contenido de localStorage, y si no es nulo, lo coloca en la lista tal como hizo el usuario. "n" es el número correspondiente a la clave del último elemento almacenado, y lo almacenamos en la *posición* 0 de localStorage, es decir, la clave "0". Según se van borrando elementos, las claves dejan de ser números consetivos, pero lo importante es conocer cual es el último de estos números para asegurarnos que no se sobreescriba ningún elemento.
+> 
+> Si se detecta que ya no quedan elementos en la lista, *n* se resetea a 0.
+
 
 <img width="600" alt="calculator gif" src="https://github.com/anfipatica/discovery_piscine_web/assets/140256308/f7b31c6e-928d-4cdb-8bd8-9958a58c1022">
