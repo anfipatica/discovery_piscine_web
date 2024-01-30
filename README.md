@@ -68,7 +68,28 @@ El último ejercicio de esta unidad consiste en realizar una tarjeta de estudian
 Finalmente empezamos con JavaScript. En este primer ejercicio debemos crear un código donde al presionar un botón se cambie el color de fondo, por lo que tendremos que trabajar con manejadores de eventos, crear nuestro generador de números pseudorandomizados... Considero que es un salto de nivel grande para empezar con js.
 
 <img width="600" alt="background changing gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExam5wZXNubnE0Z2t3ZjNqZGNvdnJyOWpuN2Y5MWUzY2M3ZDNzcnZpeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RjmLePRmRZVztG07gY/giphy.gif">
+
+
 ## ex01: ballon.html
 Crearemos un globo de 200px mínimo y 420px de máximo que se hinchará (y modificará su color) cuando presionemos sobre él, y se desinflará al alejar el ratón de él.
 
 <img width="600" alt="balloon gif" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHUxbWFlYjFlYXB2M2Rwbzhhc2NiOTRnM3g1YzRyZjh0dm02cW40ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gEIkszRdJel7FKP2rQ/giphy.gif">
+
+## ex02: calc.html
+Este ejercicio consiste en hacer una pequeña calculadora sencilla. Aunque no hay requerimientos en cuanto a la parte estética, sí se establece en el subject qué elementos deben componerla por lo que el resultado final debería seguir una estructura algo similar a esta:
+
+<img width="600" alt="calculator gif" src="https://media.giphy.com/media/GFNsDSYqZDME0FIk0H/giphy.gif">
+
+Además incluye eventos de tiempo ya que cada 30 segundos debe aparecer una alerta.
+
+## ex03: index.html todo.js
+Deberemos crear una lista de tareas en un elemento de tipo lista que reciba input del usuario a través de un prompt, y que pueda eliminar las tareas haciendo click sobre ellas. Manejo del DOM y eventos a tope.
+Lo que considero que ha resultado verdaderamente complejo es el manejo de las cookies, ya que el subject pone como tarea adicional que los elementos dentro de la lista se mantenga al recargar la página o al salir de esta. Piden emplear cookies, pero no he sido capaz de trabajar con cookies desde el navegador de google Chrome, mirando en la pestaña "Application" al inspeccionar la página simplemente no se llegaban a almacenar las cookies. Con el mismo código en firefox sí funcionaba. Al final opté por usar localStorage ya que en general es recomendable usarlo frente a las cookies salvo que se necesite enviar algo a un servidor.
+El resultado es el siguiente:
+
+<img width="600" alt="calculator gif" src="https://media.giphy.com/media/RGqP7bnQpScfRst1Ix/giphy.gif">
+
+-> El local storage se compone, al igual que las cookies, de una "clave" y de su contenido. Gracias a la clave podemos acceder al contenido que hemos almacenado. En este caso para poder acceder facilmente a los elementos, he trabajado como si de un array se tratara: las claves serán números consecutivos empezando por el 1 como si de posiciones se tratara (la posición 0 está ocupada almacenando "n", una información vital para el correcto funcionamiento de este planteamiento).
+Cuando se recarga la página se activa un evento que va recorriendo de 1 a "n" el posible contenido de localStorage, y si no es nulo, lo coloca en la lista tal como hizo el usuario. "n" es el número correspondiente a la clave del último elemento almacenado, y lo almacenamos en la *posición* 0 de localStorage, es decir, la clave "0". Según se van borrando elementos, las claves dejan de ser números consetivos, pero lo importante es conocer cual es el último de estos números para asegurarnos que no se sobreescriba ningún elemento. Si se detecta que ya no quedan elementos en la lista, *n* se resetea a 0.
+
+<img width="600" alt="calculator gif" src="https://github.com/anfipatica/discovery_piscine_web/assets/140256308/f7b31c6e-928d-4cdb-8bd8-9958a58c1022">
