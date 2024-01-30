@@ -118,7 +118,7 @@ El resultado es el siguiente:
 
 <img alt="display=flex notes 1" src="https://i.imgur.com/redgH3U.png">
 
-<img alt="display=flex notes 1" src="https://i.imgur.com/9YLDuqf.png">
+<img alt="display=flex notes 1" src="https://i.imgur.com/31bLZyT.png">
 
 
 
