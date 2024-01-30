@@ -67,7 +67,7 @@ El último ejercicio de esta unidad consiste en realizar una tarjeta de estudian
 
 ## Cellule3
 ## ex00: backgroound.html background.css background.js
-Finalmente empezamos con JavaScript. En este primer ejercicio debemos crear un código donde al presionar un botón se cambie el color de fondo, por lo que tendremos que trabajar con manejadores de eventos, crear nuestro generador de números pseudorandomizados... Considero que es un salto de nivel grande para empezar con js.
+Finalmente empezamos con JavaScript. En este primer ejercicio debemos crear un código donde al presionar un botón se cambie el color de fondo, por lo que tendremos que trabajar con manejadores de eventos, manipular el DOM, crear nuestro generador de números pseudorandomizados...
 
 <img width="600" alt="background changing gif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExam5wZXNubnE0Z2t3ZjNqZGNvdnJyOWpuN2Y5MWUzY2M3ZDNzcnZpeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RjmLePRmRZVztG07gY/giphy.gif">
 
@@ -86,7 +86,8 @@ Además incluye eventos de tiempo ya que cada 30 segundos debe aparecer una aler
 
 ## ex03: index.html todo.js
 Deberemos crear una lista de tareas en un elemento de tipo lista que reciba input del usuario a través de un prompt, y que pueda eliminar las tareas haciendo click sobre ellas. Manejo del DOM y eventos a tope.
-Lo que considero que ha resultado verdaderamente complejo es el manejo de las cookies, ya que el subject pone como tarea adicional que los elementos dentro de la lista se mantenga al recargar la página o al salir de esta. Piden emplear cookies, pero no he sido capaz de trabajar con cookies desde el navegador de google Chrome, mirando en la pestaña "Application" al inspeccionar la página simplemente no se llegaban a almacenar las cookies. Con el mismo código en firefox sí funcionaba. Al final opté por usar localStorage ya que en general es recomendable usarlo frente a las cookies salvo que se necesite enviar algo a un servidor.
+
+Lo realmente novedoso e interesante de este proyecto se encuentra en una tarea adicional del subject, la cual pide que los elementos dentro de la lista se mantenga al recargar la página o al salir de esta. Piden emplear cookies pero finalmente opté por usar localStorage ya que en general es recomendable usarlo frente a las cookies salvo que se necesite enviar algo a un servidor, además de proporcionar una manipulación más cómoda y evitar problemas con los navegadores.
 El resultado es el siguiente:
 
 <img width="600" alt="calculator gif" src="https://media.giphy.com/media/RGqP7bnQpScfRst1Ix/giphy.gif">
