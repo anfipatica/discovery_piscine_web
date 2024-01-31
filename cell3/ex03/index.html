@@ -33,6 +33,7 @@
 			background-color: #84a59d;
 			font-weight: lighter;
 			box-shadow: 0 0 2px 1px #56706a;
+
 		}
 		button {
 			background-color: rgb(20, 20, 20);
@@ -51,12 +52,25 @@
 			height: fit-content;
 			color: rgb(235, 235, 235);
 			margin: 10px;
-			font-size: 20px;
+			font-size: 18px;
 		}
 		div div:hover {
 			background-color: #f6bd60;
 			color: rgb(17, 16, 16);
 		}
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+		::-webkit-scrollbar-thumb {
+			background: rgba(235, 235, 235, 0.178); 
+		}
+		::-webkit-scrollbar:hover {
+			background: #b4c4bfcc; 
+		}
+		::-webkit-scrollbar-thumb:hover {
+			background: rgba(235, 235, 235); 
+		}
+		
 	</style>
 </head>
 <body>
@@ -102,7 +116,7 @@
 		}
 
 		function add_div_on_load() {
-			if (localStorage.length == 0)
+			if (localStorage.length <= 1)
 				localStorage.setItem(0, 0);
 			while (++n <= localStorage.getItem(0)) {
 				if (localStorage.getItem(n) != null)
