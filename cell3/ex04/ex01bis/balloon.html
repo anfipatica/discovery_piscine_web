@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				display: flex;
+				height: 100vh;
+				justify-content: center;
+				align-items: center;
+			}
+			#container {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-wrap: pretty;
+				text-align: center;
+			}
+			#message1, #message2 {
+				font-size: 35px;
+				padding: 0px;
+				margin: 20px;
+				
+			}
+			.message {
+				opacity: 0;
+				z-index: 0;
+			}
+			button {
+				margin-top: 30px;
+				min-width: 80px;
+				height: 45px;
+				font-size: 25px;
+				background-color: rgb(82, 87, 132);
+				color: aliceblue;
+			}
+			#balloon {
+				z-index: 1;
+				width: 200px;
+				height: 200px;
+				background-color:rgb(189,71,71);
+				border-radius: 50%;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="balloon">
+			</div>
+			<p class="message" id="message1">Ups, It exploded...</p> 
+			<p class="message" id="message2">Do you want another balloon?</p> 
+			<button class="message" id="button">Yes</button>
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script type="text/javascript">
+			let n = 1;
+			$(function() {
+				$("#balloon").click(function() {
+					if ($("#balloon").width() < 400)
+						$("#balloon").animate({width: $("#balloon").width() + 70, height: $("#balloon").height() + 70});
+					else {
+						$("#balloon").animate({width: 0, height: 0});
+						$(".message").css("opacity",0);
+						$(".message").show();
+						$("#message1").animate({opacity: 1},2000);
+						setTimeout(function(){
+							$("#message2").animate({opacity: 1},2000);
+							setTimeout(function(){
+								$("button").animate({opacity: 1},1000);
+							}, 1000);
+						}, 1000);
+						
+					}
+				});
+				$("button").off("click");
+				$("button").click(function() {
+					console.log(n);
+					let hexadecimal = "0123456789ABCDEF"
+					let color_code = "#";
+					for (let i = 0; i < 6; i++)
+							color_code += hexadecimal[Math.floor(Math.random()*10)];
+					$("#balloon").css("background-color",color_code);
+
+					$("#balloon").animate({width: 200, height: 200, opacity: 1});
+					$(".message").slideUp();
+					n++;
+					setTimeout(function(){
+						if (n == 2) {
+							$("#message1").text("Would you look at that, it exploded again!");
+						}
+						else if (n == 3) {
+							$("#message1").text("What's up with this balloons!");
+							$("#message2").text("...Another one?");
+						}
+						else if (n == 4) {
+							$("#message1").text("I'm starting to think you are doing this on purpose...");
+							$("#message2").text("Could you please stop?");
+							$("button").text("No");
+						}
+						else if (n == 5){
+							$("#message1").text("STOP, you're going to explode all of my balloons!");
+							$("#message2").text();
+							$("button").text("NO");
+						}
+						else if (n > 5){
+							$("#message1").text("I HATE YOU");
+							$("#message2").text("");
+							$("button").text("BALLOON!");
+						}
+					}, 900)
+				})
+			})
+		</script>
+	</body>
+</html>

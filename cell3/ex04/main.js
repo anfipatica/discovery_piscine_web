@@ -17,6 +17,4 @@ $(function() { //Una manera resumida de escribir lo anterior
 		$(".primero").cdd({"font-size":n+"px"})
 	})
 
-	
-
 })
