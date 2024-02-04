@@ -100,18 +100,11 @@
 
 				if (nn1 % 1 != 0 || nn2 % 1 != 0 || nn1 < 0 || nn2 < 0)
 					result = "Error :(";
-				else if (operator.value == '+')
-					result = nn1 + nn2;
-				else if (operator.value == '-')
-					result = nn1 - nn2;
-				else if (operator.value == '*')
-					result = nn1 * nn2;
 				else if ((operator.value == '/' || operator.value == '%') && nn2 == 0)
 					result = "It's over 9000!";
-				else if (operator.value == '/')
-					result = nn1 / nn2;
 				else
-					result = nn1 % nn2;
+					result = eval(n1.value + operator.value + n2.value);
+
 				window.alert(result);
 				console.log(result);
 				}

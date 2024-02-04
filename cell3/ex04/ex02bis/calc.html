@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				background-color: #f4f1de;
+				display: flex;
+				flex-direction: column;
+				height: 100vh;
+				justify-content: center;
+				align-items: center;
+				
+			}
+			.calculator {
+				display: flex;
+				flex-direction: column;
+				justify-content:space-evenly;
+				align-items: center;
+				background-color: #81b29a;
+				height: 40%;
+				width: 375px;
+				border-radius: 5px;
+				padding: 5px;
+				box-shadow: 0px 0px 2px 1px #e07b5f98;
+			}
+
+			.upper, .lower {
+				height: 50%;
+				width: 100%;
+				display: flex;
+				justify-content:center;
+				gap:10px;
+				align-items: center;
+
+			}
+
+			.upper input {
+				width:30%;
+				height: 40%;
+				font-size: 30px;
+				text-align: center;
+				border: none;
+			}
+			.upper input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			.upper select {
+				width: 13%;
+				height: 40%;
+				font-size: 30px;
+				text-align: center;
+				border: none;
+			}
+
+			.lower input {
+				width: 60%;
+				height: 50%;
+				border-radius: 5px;
+				font-size: 30px;
+				font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				border: 2px solid #5d6182;
+				background-color: #3d405b;
+				color: #f4f1de;
+			}
+
+			.lower input:hover {
+				background-color: #4d5172;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="calculator">
+			<div class="upper">
+				<input type="number" placeholder="0" id="n1">
+				<select name="operator" id="operator">
+					<option value="+">+</option>
+					<option value="-">-</option>
+					<option value="*">*</option>
+					<option value="/">/</option>
+					<option value="%">%</option>
+				</select>
+				<input type="number" placeholder="0" id="n2">
+			</div>
+			<div class="lower">
+				<input type="submit" value="Try me!" id="button">
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#button").click(function() {
+					let nn1 = $("#n1").val();
+					let operator = $("#operator").val();
+					let nn2 = $("#n2").val();
+					let result;
+
+					if ( nn1 % 1 != 0 || nn2 % 1 != 0 || nn1 < 0 || nn2 < 0)
+						result = "Error :(";
+					else if ((operator == '/' || operator == '%') && nn2 == 0)
+						result = "It's over 9000!";
+					else
+						result = eval(nn1 + operator + nn2);
+
+					alert(result); 
+					console.log(result);
+				})
+				setInterval(function() {
+					alert("Please, use me...");
+				}, 30000);
+			})
+		</script>
+	</body>
+</html>
